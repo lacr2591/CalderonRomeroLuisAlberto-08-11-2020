@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Entity.Entidades.Photo>
+
+@{
+    ViewData["Title"] = "Photo por ID";
+}
+
+<h1>Photos del Album con ID:  @ViewBag.IdAlbum</h1>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+
+        <th>
+            Thumbnail
+        </th>
+        <th>
+            Acciones
+        </th>
+    </tr>
+
+
+    @foreach (var photo in Model)
+    {
+        <tr>
+            <td>
+                @photo.Id
+            </td>
+            <td>
+                @photo.Title
+            </td>
+            <td>
+                <img src="@photo.ThumbnailUrl" width="30" height="30">
+            </td>
+            <td>
+                <input id="@photo.Id" onclick="verComentarios(this.id)" class="btn-danger" type="button" value="Ver Comentarios" />
+            </td>
+        </tr>
+    }
+</table>
+
+<div id="comentariosPhoto">
+
+</div>
+
+@section Scripts {
+    <script>
+        function verComentarios(idPhoto) {
+            var url = "@Url.Action("ObtenerComentarios","Comments")";
+            var data = { idPhoto, idPhoto };
+            var divComentarios = $("#comentariosPhoto");
+
+            $.get(url, data).done(function (data) {
+                divComentarios.children().last().remove();
+                divComentarios.append(data)
+            }).fail(handleExceptionAjax).always(function () {
+
+            });
+        }
+        function handleExceptionAjax() {
+            console.log("NO SE OBTUVIERON DATOS");
+        }
+
+
+    </script>
+}

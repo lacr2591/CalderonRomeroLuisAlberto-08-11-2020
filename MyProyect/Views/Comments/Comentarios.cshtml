@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Entity.Entidades.Comment>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Email</th>
+            <th>Body</th>
+        </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Email</td>
+            <td>@item.Body</td>
+        </tr>
+    }
+    </table>
+

@@ -1,0 +1,8 @@
+D:\Bertoni\Luis Alberto Calderon Romero 08 11 2020\Entity\bin\Debug\netcoreapp3.1\Entity.deps.json
+D:\Bertoni\Luis Alberto Calderon Romero 08 11 2020\Entity\bin\Debug\netcoreapp3.1\Entity.dll
+D:\Bertoni\Luis Alberto Calderon Romero 08 11 2020\Entity\bin\Debug\netcoreapp3.1\Entity.pdb
+D:\Bertoni\Luis Alberto Calderon Romero 08 11 2020\Entity\obj\Debug\netcoreapp3.1\Entity.csprojAssemblyReference.cache
+D:\Bertoni\Luis Alberto Calderon Romero 08 11 2020\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfoInputs.cache
+D:\Bertoni\Luis Alberto Calderon Romero 08 11 2020\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfo.cs
+D:\Bertoni\Luis Alberto Calderon Romero 08 11 2020\Entity\obj\Debug\netcoreapp3.1\Entity.dll
+D:\Bertoni\Luis Alberto Calderon Romero 08 11 2020\Entity\obj\Debug\netcoreapp3.1\Entity.pdb

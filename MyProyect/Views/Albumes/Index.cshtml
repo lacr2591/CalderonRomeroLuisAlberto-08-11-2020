@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Entity.Entidades.Album>
+
+@{
+    ViewData["Title"] = "Albumes";
+    var listAlbumes = Model.Select(album => new SelectListItem(album.Title, album.Id.ToString()));
+}
+
+<h1>Albumes</h1>
+<form class="form-group">
+    @(Html.DropDownList("ListaAlbumes", listAlbumes, "Selecciona un album"))
+
+    <input type="button" id="visualizarAlbum" value="Visualizar Album" />
+</form>
+
+@section Scripts {
+    <script>
+        $('#visualizarAlbum').on('click', function () {
+            var idAlbum = $('#ListaAlbumes option:selected').val();
+            location.href = "Photos/Index?albumId="+idAlbum;
+        });
+    </script>
+}
+
